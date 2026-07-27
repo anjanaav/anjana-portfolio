@@ -232,7 +232,7 @@
 
     try {
       const res = await fetch(
-        'https://anjana-portfolio-jz5f.onrender.com/api/contact',
+        'https://anjana-portfolio-suiq.onrender.com/api/contact',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
