@@ -231,11 +231,14 @@
     submitBtn.disabled = true;
 
     try {
-      const res = await fetch('https://anjana-portfolio-backend.onrender.com/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
+      const res = await fetch(
+        'https://anjana-portfolio-jz5f.onrender.com/api/contact',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        }
+      );
 
       if (!res.ok) throw new Error('Request failed');
 
