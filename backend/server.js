@@ -12,13 +12,20 @@ const rateLimit = require('express-rate-limit');
 const nodemailer = require('nodemailer');
 
 const app = express();
+app.set('trust proxy', 1);
+
 const PORT = process.env.PORT || 3000;
 
 // ---------- Middleware ----------
 app.use(express.json({ limit: '20kb' }));
 
 const allowedOrigin = process.env.ALLOWED_ORIGIN || '*';
-app.use(cors({ origin: allowedOrigin }));
+
+app.use(cors({
+  origin: allowedOrigin,
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
+}));
 
 // Basic spam protection: max 5 submissions per 15 minutes per IP
 const contactLimiter = rateLimit({
@@ -112,3 +119,6 @@ app.use('/api', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Contact API running on port ${PORT}`);
 });
+
+
+allowed
