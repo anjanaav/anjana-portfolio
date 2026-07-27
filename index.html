@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anjana A V — IT Graduate & Developer</title>
+<meta name="description" content="Portfolio of Anjana A V, an Information Technology graduate building AI-powered web and mobile applications with Python, Flask, and Flutter." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Anjana A V — IT Graduate & Developer" />
+<meta property="og:description" content="AI-powered web & mobile applications built with Python, Flask, Flutter and Firebase." />
+<meta property="og:type" content="website" />
+
+<!-- Favicon (inline SVG, no external asset needed) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23CB997E'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-weight='600' fill='%23FFF8F2' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+
+<!-- Prevent flash of incorrect theme -->
+<script>
+  (function () {
+    var saved = localStorage.getItem('theme');
+    var prefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', saved || prefers);
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="ambience" aria-hidden="true"><canvas id="ambienceCanvas"></canvas></div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none"><rect width="24" height="24" rx="6" fill="var(--accent)"/><text x="12" y="17" font-family="Georgia,serif" font-size="13" font-weight="600" fill="var(--accent-contrast)" text-anchor="middle">A</text></svg>
+      </span>
+      Anjana A V
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="hero-role">
+          <span aria-hidden="true">●</span> Information Technology Graduate
+        </p>
+        <h1 class="hero-name">Anjana A V</h1>
+        <p class="hero-bio">
+          I build AI-powered web and mobile applications from automated meeting
+          transcription tools to citizen-care platforms — using Python, Flask,
+          and Flutter, backed by Firebase and REST APIs.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="assets/Anjana_A_V_Resume.pdf" class="btn btn-secondary" download>Download résumé</a>
+          <a href="#contact" class="btn btn-secondary">Contact me</a>
+        </div>
+        <div class="hero-social">
+          <a class="social-link" href="https://github.com/anjanaav" target="_blank" rel="noopener" aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 015.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.07.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.21.66.79.55A10.52 10.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          </a>
+          <a class="social-link" href="https://linkedin.com/in/avanjana" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+          <a class="social-link" href="mailto:anjana.a.vinodkumar@gmail.com" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-portrait-wrap">
+        <div class="hero-portrait">
+          <img src="assets/profile.jpg" alt="Portrait of Anjana A V" width="900" height="1349" />
+        </div>
+        <div class="hero-waveform" aria-hidden="true">
+          <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+          <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">About</span>
+        <h2 class="section-title">A little more context</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm an Information Technology graduate from Government Engineering College,
+            Idukki, with hands-on experience building web and mobile applications.
+            My work centers on Python and Flask for backend systems, Flutter for
+            cross-platform mobile apps, and Firebase for authentication and real-time data.
+          </p>
+          <p>
+            I've applied this to AI-powered projects — combining speech-to-text,
+            NLP, and REST APIs to automate tasks like meeting transcription — and
+            to citizen-focused apps that connect people with the care they need.
+            I completed a Generative AI &amp; ML internship at QNAYDS LLP, and I'm
+            comfortable across the stack, from data structures and algorithms to
+            deploying and connecting mobile clients to backend services.
+          </p>
+        </div>
+        <div class="fact-list reveal">
+          <div class="fact">
+            <span class="fact-label">Based in</span>
+            <span class="fact-value">Thrissur, Kerala, India</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Education</span>
+            <span class="fact-value">B.Tech, Information Technology — Government Engineering College Idukki (2022–2026)</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Focus areas</span>
+            <span class="fact-value">Backend development, REST APIs, Firebase, AI/NLP integration</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Currently</span>
+            <span class="fact-value">Open to internship and entry-level developer roles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Selected work</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">A featured AI-driven productivity tool, plus a citizen-care platform and a small developer-experience tool from my GitHub.</p>
+      </div>
+
+      <!-- Featured project -->
+      <article class="project-featured reveal">
+        <div>
+          <span class="project-tag">Featured · 2025–26 · Mobile Application</span>
+          <h3>Smart Meeting Minutes Generator</h3>
+          <p class="desc">
+            An AI-powered meeting assistant that turns recorded conversations into
+            structured minutes — automatically extracting summaries, key decisions,
+            and action items using speech-to-text and NLP.
+          </p>
+          <div class="tag-row" style="margin-bottom:20px">
+            <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">NLP</span>
+            <span class="tag">Speech-to-Text</span><span class="tag">Firebase Auth</span>
+            <span class="tag">Firestore</span><span class="tag">REST APIs</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/anjanaav" target="_blank" rel="noopener" class="btn btn-secondary">GitHub profile</a>
+          </div>
+          <p style="margin-bottom:20px;font-size:0.85rem;color:var(--text-tertiary)">No dedicated public repo listed yet — code is referenced from the GitHub profile above.</p>
+
+          <button class="btn btn-secondary case-study-toggle" aria-expanded="false" aria-controls="case1">
+            <span class="toggle-label">View case study</span>
+            <span class="toggle-icon" style="display:inline-block;transition:transform .3s var(--ease)">↓</span>
+          </button>
+          <div class="case-study-body" id="case1">
+            <div class="case-study-body-inner">
+              <div class="case-study-content">
+                <div class="case-block">
+                  <h4>The why</h4>
+                  <p>Reviewing meeting recordings manually to capture decisions and action items is slow and easy to get wrong. This app automates that extraction so teams get structured minutes without transcribing by hand.</p>
+                </div>
+                <div class="case-block">
+                  <h4>Technical solution</h4>
+                  <p>A Flask backend exposes REST APIs the Flutter mobile app calls to submit recordings and retrieve generated minutes. Speech-to-text converts audio into raw transcript text, which an NLP pipeline processes to pull out summaries, decisions, and action items. Firebase Authentication secures access, and Firestore stores meeting records for retrieval across sessions.</p>
+                </div>
+                <div class="case-block">
+                  <h4>Notable challenge</h4>
+                  <p>Keeping the mobile client, Flask API, and NLP processing in sync — so a submitted recording reliably comes back as structured, readable minutes — required careful REST API design between the app and backend.</p>
+                </div>
+                <div class="case-block">
+                  <h4>Outcome</h4>
+                  <p>Won Third Prize at the Future26 Project Exhibition (2026) for this project.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-arch">
+          <span class="fact-label" style="margin-bottom:14px;display:block">Architecture</span>
+          <div class="arch-flow">
+            <div class="arch-step">Flutter Mobile App</div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-step">Flask REST API</div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-step">Speech-to-Text + NLP Pipeline</div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-step">Firebase Auth + Firestore</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Secondary project -->
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <span class="project-tag">2024–25 · Mobile Application</span>
+          <h3>CARE-O: Citizen Care Platform</h3>
+          <p>
+            A mobile application designed to assist senior citizens with daily
+            care and communication, built with Flutter and Firebase for
+            authentication and real-time data management.
+          </p>
+          <div class="tag-row" style="margin-bottom:20px">
+            <span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Dart</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/anjanaav/CARE-O" target="_blank" rel="noopener" class="btn btn-secondary">Source code</a>
+          </div>
+          <p style="margin-top:16px;font-size:0.85rem;color:var(--text-tertiary)">
+            Secured Second Prize at the Future25 Project Exhibition (2025).
+          </p>
+        </article>
+
+        <article class="project-card reveal">
+          <span class="project-tag">VS Code Extension · TypeScript</span>
+          <h3>Relax On Error</h3>
+          <p>
+            A VS Code extension that plays a relaxing sound whenever an error
+            is detected in the editor, with a manual test command and
+            configurable cooldown and notification settings.
+          </p>
+          <div class="tag-row" style="margin-bottom:20px">
+            <span class="tag">TypeScript</span><span class="tag">VS Code API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/anjanaav/relax-on-error" target="_blank" rel="noopener" class="btn btn-secondary">Source code</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Toolbox</span>
+        <h2 class="section-title">Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <h3>Languages</h3>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">Dart</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3>Backend</h3>
+          <div class="tag-row">
+            <span class="tag">Flask</span><span class="tag">Express.js</span><span class="tag">Node.js</span>
+            <span class="tag">REST APIs</span><span class="tag">JWT Auth</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3>Frontend</h3>
+          <div class="tag-row">
+            <span class="tag">HTML5</span><span class="tag">CSS3</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3>Database</h3>
+          <div class="tag-row">
+            <span class="tag">Firebase Firestore</span><span class="tag">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3>AI &amp; Automation</h3>
+          <div class="tag-row">
+            <span class="tag">NLP</span><span class="tag">OCR</span><span class="tag">Google Vision API</span>
+            <span class="tag">spaCy</span><span class="tag">BERT</span><span class="tag">n8n</span><span class="tag">AI Agents</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3>Tools</h3>
+          <div class="tag-row">
+            <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span>
+            <span class="tag">Postman</span><span class="tag">Figma</span><span class="tag">Docker</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <h3>Core concepts</h3>
+          <div class="tag-row">
+            <span class="tag">Data Structures</span><span class="tag">OOP</span><span class="tag">Algorithms</span>
+            <span class="tag">DBMS</span><span class="tag">Computer Networks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Experience</span>
+        <h2 class="section-title">Where I've worked</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-date">July 2024</div>
+          <div class="timeline-body">
+            <h3>Generative AI &amp; ML Intern</h3>
+            <span class="timeline-org">QNAYDS LLP</span>
+            <ul>
+              <li>Learned Generative AI &amp; ML fundamentals</li>
+              <li>Explored prompt engineering techniques</li>
+              <li>Gained hands-on exposure to AI tools &amp; workflows</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Education</span>
+        <h2 class="section-title">Academic background</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-date">Oct 2022 – May 2026</div>
+          <div class="timeline-body">
+            <h3>B.Tech in Information Technology</h3>
+            <span class="timeline-org">Government Engineering College Idukki, Painavu</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Jun 2020 – Mar 2022</div>
+          <div class="timeline-body">
+            <h3>Higher Secondary Education</h3>
+            <span class="timeline-org">Government Higher Secondary School, Villadam, Thrissur</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Jun 2019 – Mar 2020</div>
+          <div class="timeline-body">
+            <h3>SSLC</h3>
+            <span class="timeline-org">Holy Family C.G.H.S.S, Chembukavu, Thrissur</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS & ACHIEVEMENTS ============ -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Recognition</span>
+        <h2 class="section-title">Certifications &amp; achievements</h2>
+      </div>
+      <div class="two-col">
+        <div class="reveal">
+          <h3 style="font-size:1rem;margin-bottom:16px">Certifications</h3>
+          <div class="list-card">
+            <div class="list-row">
+              <span class="list-row-title">Python using AI tools</span>
+              <span class="list-row-date">Jun 2026</span>
+            </div>
+            <div class="list-row">
+              <span class="list-row-title">Generative AI &amp; Prompt Engineering</span>
+              <span class="list-row-date">Jul 2024</span>
+            </div>
+            <div class="list-row">
+              <span class="list-row-title">Electric Vehicle Systems</span>
+              <span class="list-row-date">Aug 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <h3 style="font-size:1rem;margin-bottom:16px">Achievements &amp; awards</h3>
+          <div class="list-card">
+            <div class="list-row">
+              <span class="list-row-title">Third Prize, Future26 Project Exhibition — Smart Meeting Minutes Generator</span>
+              <span class="list-row-date">2026</span>
+            </div>
+            <div class="list-row">
+              <span class="list-row-title">Second Prize, Future25 Project Exhibition — CARE-O</span>
+              <span class="list-row-date">2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Get in touch</span>
+        <h2 class="section-title">Let's talk</h2>
+        <p class="section-sub">Open to internships, entry-level roles, and interesting collaborations.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p>The fastest way to reach me is email — I try to reply within a couple of days.</p>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>
+            <a href="mailto:anjana.a.vinodkumar@gmail.com">anjana.a.vinodkumar@gmail.com</a>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0122 16.92z"/></svg>
+            <span>+91 9446928221</span>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Thrissur, Kerala, India</span>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+              <span class="field-error">Please enter your name.</span>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+              <span class="field-error">Please enter a valid email.</span>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+            <span class="field-error">Please enter a subject.</span>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <span class="field-error">Message should be at least 10 characters.</span>
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+            <span class="btn-label">Send message</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Anjana A V</h3>
+        <p>Information Technology graduate building AI-powered web and mobile applications.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://github.com/anjanaav" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/avanjana" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:anjana.a.vinodkumar@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Anjana A V. All rights reserved.</span>
+      <span>Built with HTML, CSS &amp; JavaScript.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
