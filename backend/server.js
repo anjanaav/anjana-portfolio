@@ -119,6 +119,3 @@ app.use('/api', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Contact API running on port ${PORT}`);
 });
-
-
-allowed
