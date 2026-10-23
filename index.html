@@ -207,127 +207,384 @@
     </section>
 
     <!-- ============ PROJECTS ============ -->
+
     <section class="section" id="projects">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Selected work</span>
           <h2 class="section-title">Projects</h2>
-          <p class="section-sub">A featured AI-driven productivity tool, plus a citizen-care platform and a small
-            developer-experience tool from my GitHub.</p>
+          <p class="section-sub">
+            A collection of projects spanning AI-powered productivity,
+            senior citizen care, and developer experience.
+          </p>
         </div>
 
-        <!-- Featured project -->
+        <!-- Project 1: Smart Meeting Minutes Generator -->
         <article class="project-featured reveal">
           <div>
             <span class="project-tag">Featured · 2025–26 · Mobile Application</span>
             <h3>Smart Meeting Minutes Generator</h3>
+
             <p class="desc">
-              An AI-powered meeting assistant that turns recorded conversations into
-              structured minutes — automatically extracting summaries, key decisions,
-              and action items using speech-to-text and NLP.
+              An AI-assisted meeting tool designed to convert recorded
+              conversations into structured minutes, helping identify
+              summaries, key decisions, and action items through
+              speech-to-text and NLP processing.
             </p>
+
             <div class="tag-row" style="margin-bottom:20px">
-              <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">NLP</span>
-              <span class="tag">Speech-to-Text</span><span class="tag">Firebase Auth</span>
-              <span class="tag">Firestore</span><span class="tag">REST APIs</span>
+              <span class="tag">Flutter</span>
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Speech-to-Text</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">REST APIs</span>
             </div>
+
             <div class="project-links">
-              <a href="https://github.com/anjanaav" target="_blank" rel="noopener" class="btn btn-secondary">GitHub
-                profile</a>
+              <a href="https://github.com/anjanaav/Smart-Meeting-Minutes-Generator" target="_blank" rel="noopener"
+                class="btn btn-secondary">Source code</a>
             </div>
-            <p style="margin-bottom:20px;font-size:0.85rem;color:var(--text-tertiary)">No dedicated public repo listed
-              yet — code is referenced from the GitHub profile above.</p>
 
             <button class="btn btn-secondary case-study-toggle" aria-expanded="false" aria-controls="case1">
               <span class="toggle-label">View case study</span>
               <span class="toggle-icon" style="display:inline-block;transition:transform .3s var(--ease)">↓</span>
             </button>
+
             <div class="case-study-body" id="case1">
               <div class="case-study-body-inner">
                 <div class="case-study-content">
+
                   <div class="case-block">
                     <h4>The why</h4>
-                    <p>Reviewing meeting recordings manually to capture decisions and action items is slow and easy to
-                      get wrong. This app automates that extraction so teams get structured minutes without transcribing
-                      by hand.</p>
+                    <p>
+                      Reviewing meeting recordings manually to identify
+                      important discussions, decisions, and action items
+                      can be time-consuming. This project explores how
+                      automated transcription and NLP can help organize
+                      meeting information into readable minutes.
+                    </p>
                   </div>
+
                   <div class="case-block">
                     <h4>Technical solution</h4>
-                    <p>A Flask backend exposes REST APIs the Flutter mobile app calls to submit recordings and retrieve
-                      generated minutes. Speech-to-text converts audio into raw transcript text, which an NLP pipeline
-                      processes to pull out summaries, decisions, and action items. Firebase Authentication secures
-                      access, and Firestore stores meeting records for retrieval across sessions.</p>
+                    <p>
+                      The project uses a Flutter mobile application and
+                      Flask-based backend services. A meeting bot component
+                      is designed to join Jitsi meetings, while speech
+                      recognition and NLP processing support transcript
+                      generation and the organization of meeting information.
+                      Firebase services are used for supported authentication
+                      and data-storage functionality.
+                    </p>
                   </div>
+
                   <div class="case-block">
                     <h4>Notable challenge</h4>
-                    <p>Keeping the mobile client, Flask API, and NLP processing in sync — so a submitted recording
-                      reliably comes back as structured, readable minutes — required careful REST API design between the
-                      app and backend.</p>
+                    <p>
+                      Coordinating the mobile application, backend APIs,
+                      meeting-bot workflow, transcription, and minutes
+                      processing requires clearly defined interfaces and
+                      careful handling of each processing stage.
+                    </p>
                   </div>
-                  <div class="case-block">
-                    <h4>Outcome</h4>
-                    <p>Won Third Prize at the Future26 Project Exhibition (2026) for this project.</p>
+
+                   <div class="case-block" >
+                    <h4>Project screenshots</h4>
+
+                    <div class="project-screenshots">
+                      <figure>
+                        <img src="assets/projects/smmg1.jpeg" alt="Smart Meeting Minutes Generator main screen"
+                          loading="lazy">
+                        <figcaption>Login/Signin Page </figcaption>
+                      </figure>
+
+                      <figure>
+                        <img src="assets/projects/smmg4.jpeg" alt="Generated meeting minutes screen"
+                          loading="lazy">
+                        <figcaption>Home Screen</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="assets/projects/smmg3.jpeg" alt="Generated meeting minutes screen"
+                          loading="lazy">
+                        <figcaption>Meeting minute Starting Bot</figcaption>
+                      </figure>
+
+                      <figure>
+                        <img src="assets/projects/smmg2.jpeg" alt="Smart Meeting Minutes Generator workflow"
+                          loading="lazy">
+                        <figcaption>Help</figcaption>
+                      </figure>
+                    </div>
+
                   </div>
+
                 </div>
               </div>
             </div>
           </div>
 
           <div class="project-arch">
-            <span class="fact-label" style="margin-bottom:14px;display:block">Architecture</span>
+            <span class="fact-label" style="margin-bottom:14px;display:block">
+              Architecture
+            </span>
             <div class="arch-flow">
               <div class="arch-step">Flutter Mobile App</div>
               <div class="arch-arrow">↓</div>
-              <div class="arch-step">Flask REST API</div>
+              <div class="arch-step">Flask Backend APIs</div>
               <div class="arch-arrow">↓</div>
-              <div class="arch-step">Speech-to-Text + NLP Pipeline</div>
+              <div class="arch-step">Meeting Bot &amp; Speech-to-Text</div>
               <div class="arch-arrow">↓</div>
-              <div class="arch-step">Firebase Auth + Firestore</div>
+              <div class="arch-step">NLP &amp; Minutes Generation</div>
+              <div class="arch-arrow">↓</div>
+              <div class="arch-step">Firebase Services</div>
             </div>
           </div>
         </article>
 
-        <!-- Secondary project -->
-        <div class="project-grid">
-          <article class="project-card reveal">
+        <!-- Project 2: CARE-O -->
+        <article class="project-featured reveal">
+          <div>
             <span class="project-tag">2024–25 · Mobile Application</span>
-            <h3>CARE-O: Citizen Care Platform</h3>
-            <p>
-              A mobile application designed to assist senior citizens with daily
-              care and communication, built with Flutter and Firebase for
-              authentication and real-time data management.
+            <h3>CARE-O: Senior Citizen Care Platform</h3>
+
+            <p class="desc">
+              A senior citizen care application designed to support
+              everyday wellness, medication reminders, social connection,
+              devotional music, games, and access to guardian controls
+              and helpline features.
             </p>
+
             <div class="tag-row" style="margin-bottom:20px">
-              <span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Dart</span>
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Mobile UI</span>
+              <span class="tag">Healthcare Support</span>
             </div>
+
             <div class="project-links">
               <a href="https://github.com/anjanaav/CARE-O" target="_blank" rel="noopener"
                 class="btn btn-secondary">Source code</a>
             </div>
-            <p style="margin-top:16px;font-size:0.85rem;color:var(--text-tertiary)">
-              Secured Second Prize at the Future25 Project Exhibition (2025).
-            </p>
-          </article>
 
-          <article class="project-card reveal">
-            <span class="project-tag">VS Code Extension · TypeScript</span>
-            <h3>Relax On Error</h3>
-            <p>
-              A VS Code extension that plays a relaxing sound whenever an error
-              is detected in the editor, with a manual test command and
-              configurable cooldown and notification settings.
-            </p>
-            <div class="tag-row" style="margin-bottom:20px">
-              <span class="tag">TypeScript</span><span class="tag">VS Code API</span>
+            <button class="btn btn-secondary case-study-toggle" aria-expanded="false" aria-controls="case2">
+              <span class="toggle-label">View case study</span>
+              <span class="toggle-icon" style="display:inline-block;transition:transform .3s var(--ease)">↓</span>
+            </button>
+
+            <div class="case-study-body" id="case2">
+              <div class="case-study-body-inner">
+                <div class="case-study-content">
+
+                  <div class="case-block">
+                    <h4>The why</h4>
+                    <p>
+                      Older adults can benefit from accessible digital
+                      tools that support daily routines, emotional
+                      well-being, entertainment, and communication.
+                      CARE-O was designed to bring these supportive
+                      features together in one mobile application.
+                    </p>
+                  </div>
+
+                  <div class="case-block">
+                    <h4>Technical solution</h4>
+                    <p>
+                      The application is built with Flutter and Dart.
+                      Its planned and implemented feature areas include
+                      health and wellness, meditation and medication
+                      reminders, social connection, a devotional music
+                      player, games, guardian controls, and a helpline.
+                      Firebase should be described as a backend service
+                      only for the features actually connected in the project.
+                    </p>
+                  </div>
+
+                  <div class="case-block">
+                    <h4>Notable challenge</h4>
+                    <p>
+                      Bringing several features into one application
+                      requires a clear navigation structure and a simple,
+                      accessible interface that older adults can use
+                      comfortably.
+                    </p>
+                  </div>
+
+                  <div class="case-block">
+                    <h4>Outcome</h4>
+                    <p>
+                      Received Second Prize at the Future25 Project Exhibition
+                      (2025).
+                    </p>
+                  </div>
+
+                  <div class="case-block" >
+                    <h4>Project screenshots</h4>
+
+                    <div class="project-screenshots">
+                      <figure>
+                        <img src="assets/projects/careo1.jpeg" alt="Smart Meeting Minutes Generator main screen"
+                          loading="lazy">
+                        <figcaption>Login/Signin Screen</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="assets/projects/careo2.jpeg" alt="Smart Meeting Minutes Generator main screen"
+                          loading="lazy">
+                        <figcaption>Senior Dashboard</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="assets/projects/careo3.jpeg" alt="Smart Meeting Minutes Generator main screen"
+                          loading="lazy">
+                        <figcaption>Senior Activity Screen</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="assets/projects/careo4.jpeg" alt="Smart Meeting Minutes Generator main screen"
+                          loading="lazy">
+                        <figcaption>Connect to Guardian Screen</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="assets/projects/careo5.jpeg" alt="Smart Meeting Minutes Generator main screen"
+                          loading="lazy">
+                        <figcaption>Senior Settings & Logout Screen</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="assets/projects/careo6.jpeg" alt="Smart Meeting Minutes Generator main screen"
+                          loading="lazy">
+                        <figcaption>Guardian Dashboard</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="assets/projects/careo7.jpeg" alt="Smart Meeting Minutes Generator main screen"
+                          loading="lazy">
+                        <figcaption>Guardian Connect and Call Screen</figcaption>
+                      </figure>
+
+                      <figure>
+                        <img src="assets/projects/careo8.jpeg" alt="Generated meeting minutes screen"
+                          loading="lazy">
+                        <figcaption>Guardian Alert Screen</figcaption>
+                      </figure>
+                      <figure>
+                        <img src="assets/projects/careo9.jpeg" alt="Generated meeting minutes screen"
+                          loading="lazy">
+                        <figcaption>Guardian Settings & Logout Screen</figcaption>
+                      </figure>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="project-arch">
+            <span class="fact-label" style="margin-bottom:14px;display:block">
+              Architecture
+            </span>
+            <div class="arch-flow">
+              <div class="arch-step">Flutter Mobile App</div>
+              <div class="arch-arrow">↓</div>
+              <div class="arch-step">Dart Application Logic</div>
+              <div class="arch-arrow">↓</div>
+              <div class="arch-step">Wellness &amp; Reminder Modules</div>
+              <div class="arch-arrow">↓</div>
+              <div class="arch-step">Social, Music &amp; Games</div>
+              <div class="arch-arrow">↓</div>
+              <div class="arch-step">Guardian &amp; Helpline Features</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Relax On Error -->
+        <article class="project-featured reveal">
+          <div>
+            <span class="project-tag">Developer Tool · VS Code Extension</span>
+            <h3>Relax On Error</h3>
+
+            <p class="desc">
+              A Visual Studio Code extension that plays a relaxing sound
+              when editor errors are detected, with a manual test command
+              and configurable cooldown and notification settings.
+            </p>
+
+            <div class="tag-row" style="margin-bottom:20px">
+              <span class="tag">TypeScript</span>
+              <span class="tag">VS Code API</span>
+              <span class="tag">Diagnostics</span>
+              <span class="tag">Extension Development</span>
+            </div>
+
             <div class="project-links">
               <a href="https://github.com/anjanaav/relax-on-error" target="_blank" rel="noopener"
                 class="btn btn-secondary">Source code</a>
             </div>
-          </article>
-        </div>
+
+            <button class="btn btn-secondary case-study-toggle" aria-expanded="false" aria-controls="case3">
+              <span class="toggle-label">View case study</span>
+              <span class="toggle-icon" style="display:inline-block;transition:transform .3s var(--ease)">↓</span>
+            </button>
+
+            <div class="case-study-body" id="case3">
+              <div class="case-study-body-inner">
+                <div class="case-study-content">
+
+                  <div class="case-block">
+                    <h4>The why</h4>
+                    <p>
+                      Frequent editor errors can interrupt a developer's
+                      workflow. Relax On Error explores a small, customizable
+                      way to make those moments less frustrating by providing
+                      an optional relaxing audio cue.
+                    </p>
+                  </div>
+
+                  <div class="case-block">
+                    <h4>Technical solution</h4>
+                    <p>
+                      The extension is developed in TypeScript using the
+                      Visual Studio Code extension API. It monitors editor
+                      diagnostics and provides a sound-triggering workflow,
+                      alongside a manual test command and configurable
+                      cooldown and notification settings.
+                    </p>
+                  </div>
+
+                  <div class="case-block">
+                    <h4>Notable challenge</h4>
+                    <p>
+                      The extension needs to respond to diagnostic changes
+                      without repeatedly triggering sounds for the same
+                      ongoing issue. Cooldown and configuration options
+                      help make the behaviour more manageable.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="project-arch">
+              <span class="fact-label" style="margin-bottom:14px;display:block">
+                Architecture
+              </span>
+              <div class="arch-flow">
+                <div class="arch-step">VS Code Editor</div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-step">Editor Diagnostics</div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-step">Extension Logic</div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-step">Cooldown &amp; Settings</div>
+                <div class="arch-arrow">↓</div>
+                <div class="arch-step">Relaxing Sound Notification</div>
+              </div>
+            </div>
+        </article>
+
       </div>
     </section>
+
 
     <!-- ============ SKILLS ============ -->
     <section class="section" id="skills">
@@ -474,11 +731,6 @@
           <div class="reveal">
             <h3 style="font-size:1rem;margin-bottom:16px">Achievements &amp; awards</h3>
             <div class="list-card">
-              <div class="list-row">
-                <span class="list-row-title">Third Prize, Future26 Project Exhibition — Smart Meeting Minutes
-                  Generator</span>
-                <span class="list-row-date">2026</span>
-              </div>
               <div class="list-row">
                 <span class="list-row-title">Second Prize, Future25 Project Exhibition — CARE-O</span>
                 <span class="list-row-date">2025</span>

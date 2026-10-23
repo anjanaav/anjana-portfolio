@@ -521,6 +521,79 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .fact-value { font-weight: 500; color: var(--text-primary); }
 
+
+
+/* ===== Case Study Screenshot Gallery ===== */
+
+.project-screenshots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin: 28px 0;
+}
+
+.project-screenshots figure {
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--border, #343434);
+  background: var(--surface, #1c1c1c);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-screenshots figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.project-screenshots img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  object-position: center;
+  padding: 10px;
+  background: var(--surface, #1c1c1c);
+  opacity: 1;
+  visibility: visible;
+}
+
+.project-screenshots figcaption {
+  padding: 12px 15px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary, #bdbdbd);
+  border-top: 1px solid var(--border, #343434);
+}
+
+/* One screenshot can use the full available width */
+.project-screenshots figure:only-child {
+  grid-column: 1 / -1;
+  max-width: 850px;
+}
+
+.project-screenshots figure:only-child img {
+  height: auto;
+  max-height: 520px;
+  min-height: 220px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .project-screenshots {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .project-screenshots img {
+    height: 240px;
+  }
+}
+
+
+
 /* ---------- Skills ---------- */
 .skills-grid {
   display: grid;
